@@ -1,4 +1,5 @@
 import { NestFactory } from '@nestjs/core';
+import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 import { AppModule } from './app.module';
 import { ValidationPipe } from '@nestjs/common';
 
@@ -13,6 +14,19 @@ async function bootstrap() {
       forbidNonWhitelisted: true,
     }),
   );
+
+
+  // Documentation with Swagger
+  const config = new DocumentBuilder()
+    .setTitle('API Acreditaciones')
+    .setDescription('Apis disponibles para las acreditaciones')
+    .setVersion('1.0')
+    .addTag('apis')
+    .build();
+  const document = SwaggerModule.createDocument(app, config);
+  SwaggerModule.setup('docs', app, document);
+
+
   await app.listen(3000);
 }
 bootstrap();

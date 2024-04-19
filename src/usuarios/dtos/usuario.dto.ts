@@ -14,7 +14,7 @@ export class UsuarioDto {
 
   @IsNotEmpty()
   @IsEmail()
-  @ApiProperty()
+  @ApiProperty({ description: "the email of user"})
   email: string;
 }
 
