@@ -1,5 +1,5 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
-import { UpdateUsuarioDto, UsuarioDto } from 'src/usuarios/dtos/usuario.dto';
+import { UpdateUsuarioDto, UsuarioDto } from './../../usuarios/dtos/usuario.dto';
 
 export class Usuario {
   id: number;

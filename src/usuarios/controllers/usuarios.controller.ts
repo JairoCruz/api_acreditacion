@@ -9,8 +9,8 @@ import {
   Query,
   ParseIntPipe,
 } from '@nestjs/common';
-import { UsuarioDto, UpdateUsuarioDto } from 'src/usuarios/dtos/usuario.dto';
-import { UsuariosService } from 'src/usuarios/services/usuarios.service';
+import { UsuarioDto, UpdateUsuarioDto } from './../../usuarios/dtos/usuario.dto';
+import { UsuariosService } from './../../usuarios/services/usuarios.service';
 import { ApiTags } from '@nestjs/swagger';
 
 @ApiTags('usuarios')
